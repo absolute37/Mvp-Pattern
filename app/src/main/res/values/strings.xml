@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UX</string>
+    <string name="toolbar_header_ux_design">UX DESIGN</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_delete">Delete</string>
+    <string name="home_text_please_enter_your_information">Please Enter your information</string>
+</resources>

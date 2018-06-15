@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Text Size-->
+    <dimen name="text_header_size">20dp</dimen>
+    <dimen name="text_detail_size">18dp</dimen>
+    <!--Height-->
+    <dimen name="status_bar_height">52dp</dimen>
+    <!--Padding-->
+    <dimen name="padding_default">8dp</dimen>
+    <dimen name="padding_small">2dp</dimen>
+    <dimen name="padding_middle">4dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+</resources>

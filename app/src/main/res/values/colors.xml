@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_primary">@color/base_color_green</color>
+    <color name="green_dark">@color/base_color_dark_green</color>
+    <color name="red_primary">@color/base_color_red</color>
+    <color name="red_dark">@color/base_color_red</color>
+    <color name="blue_pastel">@color/base_blue_pastel</color>
+    <color name="blue_pastel_dark">@color/base_color_dark_pastel</color>
+    <!-- BASE COLOR-->
+    <color name="base_blue_pastel">#44bee7</color>
+    <color name="base_color_green">#a2f183</color>
+    <color name="base_color_dark_green">#8ad178</color>
+    <color name="base_color_dark_pastel">#7bb9ce</color>
+    <color name="base_color_red">#f5767a</color>
+    <color name="base_color_dark_red">#ba6768</color>
+
+</resources>
