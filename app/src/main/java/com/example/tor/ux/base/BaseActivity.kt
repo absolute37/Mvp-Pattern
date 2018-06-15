@@ -57,7 +57,9 @@ abstract class BaseActivity<P : BaseMvpContractor.Presenter<*>> : AppCompatActiv
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
-        restoreView(savedInstanceState)
+        if (savedInstanceState != null) {
+            restoreView(savedInstanceState)
+        }
     }
 
     open fun restoreView(savedInstanceState: Bundle) {}
