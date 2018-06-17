@@ -9,14 +9,14 @@ import com.example.tor.ux.exception.MvpPresenterNotCreateException
 abstract class BaseMvpActivity<P : BaseMvpContractor.Presenter<BaseMvpContractor.View>> : AppCompatActivity(), BaseMvpContractor.View {
 
     private var presenter: P? = null
-    abstract val layoutView: Int
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
         presenter = createPresenter()
         presenter!!.attachView(this)
-        val layoutResId = layoutView
-        if (layoutView == 0) throw MvpNotSetLayoutException()
+
+        val layoutResId = getLayoutView()
+        if (getLayoutView() == 0) throw MvpNotSetLayoutException()
         setContentView(layoutResId)
         bindView()
         setupInstance()
@@ -65,6 +65,8 @@ abstract class BaseMvpActivity<P : BaseMvpContractor.Presenter<BaseMvpContractor
     open fun restoreView(savedInstanceState: Bundle) {}
 
     abstract fun createPresenter(): P
+
+    abstract fun getLayoutView(): Int
 
     abstract fun bindView()
 
