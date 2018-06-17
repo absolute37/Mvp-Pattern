@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import com.example.tor.ux.exception.MvpNotSetLayoutException
 import com.example.tor.ux.exception.MvpPresenterNotCreateException
 
-abstract class BaseActivity<P : BaseMvpContractor.Presenter<BaseMvpContractor.View>> : AppCompatActivity(), BaseMvpContractor.View {
+abstract class BaseMvpActivity<P : BaseMvpContractor.Presenter<BaseMvpContractor.View>> : AppCompatActivity(), BaseMvpContractor.View {
 
     private var presenter: P? = null
     abstract val layoutView: Int
