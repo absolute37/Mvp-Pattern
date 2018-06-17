@@ -5,7 +5,7 @@ import java.lang.ref.WeakReference
 
 abstract class BaseMvpPresenter<V : BaseMvpContractor.View> : BaseMvpContractor.Presenter<V> {
 
-    lateinit var mMvpView: WeakReference<V>
+     var mMvpView: WeakReference<V>? = null
 
     override fun attachView(mvpView: V) {
         mMvpView = WeakReference(mvpView)
@@ -17,7 +17,7 @@ abstract class BaseMvpPresenter<V : BaseMvpContractor.View> : BaseMvpContractor.
 
     @Throws(NullPointerException::class)
     override fun getView(): V {
-        if (mMvpView != null) return mMvpView.get()!!
+        if (mMvpView != null) return mMvpView?.get()!!
         throw MvpViewNotAttachedException()
     }
 
@@ -29,5 +29,4 @@ abstract class BaseMvpPresenter<V : BaseMvpContractor.View> : BaseMvpContractor.
     override fun onViewStop() {}
 
     override fun onViewDestroy() {}
-}
 }

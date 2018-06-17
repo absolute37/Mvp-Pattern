@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.tor.ux.exception.MvpNotSetLayoutException
 import com.example.tor.ux.exception.MvpPresenterNotCreateException
 
-abstract class BaseMvpFragment<P : BaseMvpContractor.Presenter<*>> : Fragment(), BaseMvpContractor.View {
+abstract class BaseMvpFragment<P : BaseMvpContractor.Presenter<BaseMvpContractor.View>> : Fragment(), BaseMvpContractor.View {
     private lateinit var presenter: P
 
 

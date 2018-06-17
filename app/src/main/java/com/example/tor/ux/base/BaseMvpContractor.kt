@@ -9,7 +9,7 @@ interface BaseMvpContractor {
 
     interface Presenter<V : BaseMvpContractor.View> {
 
-        fun attachView(view: View)
+        fun attachView(view: V)
 
         fun detachView()
 

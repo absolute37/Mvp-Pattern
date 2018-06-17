@@ -10,7 +10,7 @@ class MainContractor {
     }
 
     interface Presenter : BaseMvpContractor.Presenter<MainContractor.View> {
-        fun setData();
+        fun setData()
     }
 
 }
