@@ -1,15 +1,15 @@
 package com.example.tor.ux.base
 
-interface BaseMvpContractor {
+interface BaseContractor {
     interface View {
 
-        fun getPresenter(): Presenter<*>
+        fun getPresenter(): Presenter<BaseContractor.View>
 
     }
 
-    interface Presenter<V : BaseMvpContractor.View> {
+    interface Presenter<V : View> {
 
-        fun attachView(view: V)
+        fun attachView(mvpView: V)
 
         fun detachView()
 

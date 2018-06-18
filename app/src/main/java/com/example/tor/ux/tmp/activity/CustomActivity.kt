@@ -1,31 +1,30 @@
 package com.example.tor.ux.tmp.activity
 
-import com.example.tor.ux.base.BaseMvpActivity
+import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import com.example.tor.ux.R
+import kotlinx.android.synthetic.main.activity_main.*
 
-class CustomActivity : BaseMvpActivity<CustomContractor.Presenter>(), CustomContractor.View {
-    
-    override fun createPresenter(): CustomContractor.Presenter {
-        return CustomActivityPresenter.create()
+
+class CustomActivity : AppCompatActivity(), CustomContractor.View {
+    lateinit var getPresenter: CustomActivityPresenter
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        getPresenter.getData()
+
+
     }
 
-    override fun getLayoutView(): Int {
-        
-        return 0
+    override fun showMessage(message: String) {
+
+        text_change.text = message
+
     }
 
-    override fun bindView() {
-       
+    override fun showTitle(title: String) {
+
     }
 
-    override fun setupInstance() {
-        
-    }
-
-    override fun setupView() {
-        
-    }
-
-    override fun initialize() {
-        
-    }
 }

@@ -3,21 +3,22 @@ package com.example.tor.ux.base
 import com.example.tor.ux.exception.MvpViewNotAttachedException
 import java.lang.ref.WeakReference
 
-abstract class BaseMvpPresenter<V : BaseMvpContractor.View> : BaseMvpContractor.Presenter<V> {
+abstract class BasePresenter<V : BaseContractor.View> : BaseContractor.Presenter<V> {
 
-     var mMvpView: WeakReference<V>? = null
+
+    var mView: WeakReference<V>? = null
 
     override fun attachView(mvpView: V) {
-        mMvpView = WeakReference(mvpView)
+        mView = WeakReference(mvpView)
     }
 
     override fun detachView() {
-        mMvpView = null
+        mView = null
     }
 
     @Throws(NullPointerException::class)
     override fun getView(): V {
-        if (mMvpView != null) return mMvpView?.get()!!
+        if (mView != null) return mView?.get()!!
         throw MvpViewNotAttachedException()
     }
 

@@ -1,11 +1,7 @@
 package com.example.tor.ux.tmp.fragment
 
-import com.example.tor.ux.base.BaseMvpPresenter
+import com.example.tor.ux.base.BasePresenter
 
-class CustomFragmentPresenter : BaseMvpPresenter<CustomFragmentContractor.View>,CustomFragmentContractor.Presenter {
-
-    fun create(): CustomFragmentContractor.Presenter {
-        return CustomFragmentPresenter()
-    }
+class CustomFragmentPresenter{
 
 }

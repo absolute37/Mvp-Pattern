@@ -1,10 +1,10 @@
 package com.example.tor.ux.tmp.fragment
 
-import com.example.tor.ux.base.BaseMvpContractor
+import com.example.tor.ux.base.BaseContractor
 
 class CustomFragmentContractor{
 
-    interface View : BaseMvpContractor.View
-    interface Presenter : BaseMvpContractor.Presenter<CustomFragmentContractor.View>
+    interface View : BaseContractor.View
+    interface Presenter : BaseContractor.Presenter<CustomFragmentContractor.View>
 
 }

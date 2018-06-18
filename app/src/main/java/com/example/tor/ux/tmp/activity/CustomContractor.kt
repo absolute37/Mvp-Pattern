@@ -1,8 +1,17 @@
 package com.example.tor.ux.tmp.activity
 
-import com.example.tor.ux.base.BaseMvpContractor
+import com.example.tor.ux.base.BaseContractor
 
 class CustomContractor {
-    interface View : BaseMvpContractor.View
-    interface Presenter : BaseMvpContractor.Presenter<View>
+    internal interface View {
+
+        fun showMessage(message: String)
+
+        fun showTitle(title: String)
+
+    }
+
+    internal interface Presenter {
+        fun getData()
+    }
 }
