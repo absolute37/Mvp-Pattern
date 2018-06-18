@@ -2,16 +2,14 @@ package com.example.tor.ux.tmp.activity
 
 import com.example.tor.ux.base.BasePresenter
 
-class CustomActivityPresenter : CustomContractor.Presenter {
-    private lateinit var getView : CustomContractor.View
+class CustomActivityPresenter : BasePresenter<CustomContractor.View>(), CustomContractor.Presenter {
 
-    override
-    fun getData() {
+    companion object {
+        fun create(): CustomContractor.Presenter {
 
-        getView.showMessage("TEST")
-        getView.showTitle("HELLO ~ ")
+            return CustomActivityPresenter()
+        }
     }
-
 
 }
 
